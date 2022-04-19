@@ -1,13 +1,12 @@
-package com.codingninjas.babbar.ds;
+package com.codingninjas.babbar.ds.array;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ReverseArray {
 
     public static void reverseArray(ArrayList<Integer> arr, int m) {
-        for (int i = m + 1, j = arr.size() -1; i < j; i++, j--) {
+        for (int i = m + 1, j = arr.size() - 1; i < j; i++, j--) {
             swap(arr, i, j);
             System.out.println(arr);
         }
@@ -24,7 +23,5 @@ public class ReverseArray {
         ReverseArray.reverseArray(arr, 3);
         ArrayList<Integer> arr2 = new ArrayList<>(List.of(10, 9, 8, 7, 6));
         ReverseArray.reverseArray(arr2, 3);
-
-
     }
 }
