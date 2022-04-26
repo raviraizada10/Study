@@ -1,4 +1,4 @@
-package com.codingninjas.babbar.ds.array;
+package com.codingninjas.babbar.ds.array.easy;
 
 public class SumOfMaxMin {
     public static int sumOfMaxMin(int[] arr, int n) {

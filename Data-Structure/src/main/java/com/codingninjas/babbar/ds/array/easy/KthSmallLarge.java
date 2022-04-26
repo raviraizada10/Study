@@ -1,4 +1,4 @@
-package com.codingninjas.babbar.ds.array;
+package com.codingninjas.babbar.ds.array.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
