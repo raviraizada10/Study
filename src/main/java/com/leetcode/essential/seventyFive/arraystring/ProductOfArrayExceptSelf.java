@@ -1,4 +1,4 @@
-package com.leetcode.essential.seventyFive;
+package com.leetcode.essential.seventyFive.arraystring;
 
 //https://leetcode.com/problems/product-of-array-except-self/?envType=study-plan-v2&envId=leetcode-75
 public class ProductOfArrayExceptSelf {

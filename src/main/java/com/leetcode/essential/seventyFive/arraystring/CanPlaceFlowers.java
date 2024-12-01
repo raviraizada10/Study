@@ -1,4 +1,4 @@
-package com.leetcode.essential.seventyFive;
+package com.leetcode.essential.seventyFive.arraystring;
 
 //https://leetcode.com/problems/can-place-flowers/
 public class CanPlaceFlowers {

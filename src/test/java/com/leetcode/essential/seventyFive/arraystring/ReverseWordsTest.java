@@ -1,4 +1,4 @@
-package com.leetcode.essential.seventyFive;
+package com.leetcode.essential.seventyFive.arraystring;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

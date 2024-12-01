@@ -1,4 +1,4 @@
-package com.leetcode.essential.seventyFive;
+package com.leetcode.essential.seventyFive.arraystring;
 
 import java.util.ArrayList;
 import java.util.Collections;

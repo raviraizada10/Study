@@ -1,4 +1,4 @@
-package com.leetcode.essential.seventyFive;
+package com.leetcode.essential.seventyFive.arraystring;
 
 //https://leetcode.com/problems/increasing-triplet-subsequence/description/?envType=study-plan-v2&envId=leetcode-75
 public class IncreasingTripletSubsequence {
