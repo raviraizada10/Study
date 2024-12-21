@@ -2,7 +2,15 @@ package com.leetcode.essential.seventyFive.stack;
 
 public class RemoveStars {
     public String removeStars(String s) {
-//        Stack<Character> stack = new Stack<Character>(s.toCharArray());
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (char ch : s.toCharArray()) {
+            if (ch == '*') {
+                result.deleteCharAt(result.length() - 1);
+            }
+            else {
+                result.append(ch);
+            }
+        }
+        return result.toString();
     }
 }
