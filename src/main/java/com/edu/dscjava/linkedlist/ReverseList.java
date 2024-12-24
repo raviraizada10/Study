@@ -1,6 +1,8 @@
 package com.edu.dscjava.linkedlist;
 
 public class ReverseList {
+    private static LinkedListNode<Integer> current;
+
     public static LinkedListNode<Integer> reverse(LinkedListNode<Integer> head) {
         LinkedListNode<Integer> current = head;
         LinkedListNode<Integer> nextNode = null;
