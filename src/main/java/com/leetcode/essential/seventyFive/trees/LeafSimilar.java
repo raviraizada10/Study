@@ -1,0 +1,43 @@
+package com.leetcode.essential.seventyFive.trees;
+
+import java.util.ArrayList;
+import java.util.List;
+
+//https://leetcode.com/problems/leaf-similar-trees/description/?envType=study-plan-v2&envId=leetcode-75
+//872
+//https://algo.monster/liteproblems/872
+public class LeafSimilar {
+    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+        // Traverse both trees to collect the leaf node values
+        List<Integer> root1Leaves = traverseAndCollectLeaves(root1);
+        List<Integer> root2Leaves = traverseAndCollectLeaves(root2);
+
+        // Compare the collected leaf node values of both trees
+        return root1Leaves.equals(root2Leaves);
+    }
+
+    // Helper function that performs DFS and collects leaf nodes' values
+    private List<Integer> traverseAndCollectLeaves(TreeNode node) {
+        // Base case: if the node is null, return an empty list
+        if (node == null) {
+            return new ArrayList<>();
+        }
+
+        // Initialize a list to store leaf node values
+        List<Integer> leaves = new ArrayList<>();
+
+        // Recursively collect leaves from the left subtree
+        leaves.addAll(traverseAndCollectLeaves(node.left));
+
+        // Recursively collect leaves from the right subtree
+        leaves.addAll(traverseAndCollectLeaves(node.right));
+
+        // If the current node is a leaf (no children), add its value to the list
+        if (leaves.isEmpty()) {
+            leaves.add(node.val);
+        }
+
+        // Return the list of collected leaf values
+        return leaves;
+    }
+}
