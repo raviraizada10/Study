@@ -7,6 +7,15 @@ import java.util.List;
 //872
 //https://algo.monster/liteproblems/872
 public class LeafSimilar {
+
+    /**
+     * Determines if two binary trees are leaf-similar.
+     * Two trees are leaf-similar if their leaf nodes form the same sequence.
+     *
+     * @param root1 The root of the first binary tree.
+     * @param root2 The root of the second binary tree.
+     * @return True if the trees are leaf-similar, false otherwise.
+     */
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         // Traverse both trees to collect the leaf node values
         List<Integer> root1Leaves = traverseAndCollectLeaves(root1);
@@ -16,7 +25,12 @@ public class LeafSimilar {
         return root1Leaves.equals(root2Leaves);
     }
 
-    // Helper function that performs DFS and collects leaf nodes' values
+    /**
+     * Helper method to perform DFS and collect leaf nodes' values from a tree.
+     *
+     * @param node The current node being processed.
+     * @return A list of integers representing the leaf node values.
+     */
     private List<Integer> traverseAndCollectLeaves(TreeNode node) {
         // Base case: if the node is null, return an empty list
         if (node == null) {
@@ -33,7 +47,7 @@ public class LeafSimilar {
         leaves.addAll(traverseAndCollectLeaves(node.right));
 
         // If the current node is a leaf (no children), add its value to the list
-        if (leaves.isEmpty()) {
+        if (node.left == null && node.right == null) {
             leaves.add(node.val);
         }
 
