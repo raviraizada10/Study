@@ -1,5 +1,15 @@
 package com.leetcode.essential.seventyFive.list;
 
+import com.customannotation.DifficultyLevel;
+import com.customannotation.ProblemCategory;
+import com.customannotation.ProblemInfo;
+
+import static com.customannotation.enums.Difficulty.MEDIUM;
+import static com.customannotation.enums.ProblemTag.*;
+
+@DifficultyLevel(MEDIUM)
+@ProblemCategory({LINKED_LIST, TWO_POINTERS, STACK})
+@ProblemInfo(problemLink = "https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/", problemNumber = "2130", solutionLink = "https://algo.monster/liteproblems/")
 public class MaximumTwinSum {
     public int pairSum(ListNode head) {
         // Step 1: Find the middle of the linked list using slow and fast pointers

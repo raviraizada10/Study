@@ -1,17 +1,31 @@
 package com.leetcode.essential.seventyFive.list;
 
-//https://leetcode.com/problems/reverse-linked-list/?envType=study-plan-v2&envId=leetcode-75
-//206
+import com.customannotation.DifficultyLevel;
+import com.customannotation.ProblemCategory;
+import com.customannotation.ProblemInfo;
+
+import static com.customannotation.enums.Difficulty.EASY;
+import static com.customannotation.enums.ProblemTag.LINKED_LIST;
+import static com.customannotation.enums.ProblemTag.RECURSION;
+
+@DifficultyLevel(EASY)
+@ProblemCategory({LINKED_LIST, RECURSION})
+@ProblemInfo(problemLink = "https://leetcode.com/problems/reverse-linked-list/description/", problemNumber = "206", solutionLink = "https://algo.monster/liteproblems/206")
 public class ReverseList {
     /**
      * Reverses a singly linked list and returns the new head of the reversed list.
      *
      * @param head The head of the original linked list.
      * @return The head of the reversed linked list.
+     * <p>
+     * Edge Cases:
+     * - If the list is empty (head is null), return null immediately.
      */
     public ListNode reverseList(ListNode head) {
         // Edge case: If the list is empty, return null immediately.
-        if (head == null) return null;
+        if (head == null) {
+            return null;
+        }
 
         // Initialize a pointer to the previous node, starting with null.
         ListNode prevNode = null;
@@ -37,4 +51,5 @@ public class ReverseList {
         // At the end of the loop, prevNode will be pointing to the new head of the reversed list.
         return prevNode;
     }
+
 }
