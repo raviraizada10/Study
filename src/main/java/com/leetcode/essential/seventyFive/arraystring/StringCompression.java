@@ -1,6 +1,16 @@
 package com.leetcode.essential.seventyFive.arraystring;
 
-//https://leetcode.com/problems/string-compression/submissions/1466025480/?envType=study-plan-v2&envId=leetcode-75
+import com.customannotation.DifficultyLevel;
+import com.customannotation.ProblemCategory;
+import com.customannotation.ProblemInfo;
+
+import static com.customannotation.enums.Difficulty.MEDIUM;
+import static com.customannotation.enums.ProblemTag.STRING;
+import static com.customannotation.enums.ProblemTag.TWO_POINTERS;
+
+@DifficultyLevel(MEDIUM)
+@ProblemCategory({STRING, TWO_POINTERS})
+@ProblemInfo(problemLink = "https://leetcode.com/problems/string-compression/description/", problemNumber = "443", solutionLink = "https://algo.monster/liteproblems/443")
 public class StringCompression {
     public int compress(char[] chars) {
         int writeIndex = 0; // Index to write characters into the array

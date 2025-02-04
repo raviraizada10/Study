@@ -1,21 +1,58 @@
 package com.leetcode.essential.seventyFive.arraystring;
 
-//https://leetcode.com/problems/merge-strings-alternately/?envType=study-plan-v2&envId=leetcode-75
+import com.customannotation.DifficultyLevel;
+import com.customannotation.ProblemCategory;
+import com.customannotation.ProblemInfo;
+
+import static com.customannotation.enums.Difficulty.EASY;
+import static com.customannotation.enums.ProblemTag.STRING;
+import static com.customannotation.enums.ProblemTag.TWO_POINTERS;
+
+@DifficultyLevel(EASY)
+@ProblemCategory({STRING, TWO_POINTERS})
+@ProblemInfo(problemLink = "https://leetcode.com/problems/merge-strings-alternately/description/", problemNumber = "1768", solutionLink = "https://algo.monster/liteproblems/1768")
 public class MergeStringsAlternatively {
+    /**
+     * Merges two strings alternately, appending characters from each string until one or both strings are fully processed.
+     *
+     * @param word1 The first input string.
+     * @param word2 The second input string.
+     * @return A string resulting from merging characters alternately from word1 and word2.
+     * <p>
+     * Edge Cases:
+     * - Handles strings of different lengths.
+     * - Works correctly for empty strings or when one of the strings is empty.
+     */
     public String mergeAlternately(String word1, String word2) {
-        StringBuilder result = new StringBuilder();
-        int i = 0, j = 0;
-        int len = Math.min(word1.length(), word2.length());
+        StringBuilder result = new StringBuilder(); // Initialize a StringBuilder to build the result
+
+        int i = 0, j = 0; // Initialize indices for word1 and word2
+
+        int len = Math.min(word1.length(), word2.length()); // Find the minimum length of word1 and word2
+
+        // Append characters alternately from both strings until one or both are fully processed
         while (i < len || j < len) {
-            result.append(word1.charAt(i++));
-            result.append(word2.charAt(j++));
+            if (i < word1.length()) {
+                result.append(word1.charAt(i)); // Append character from word1 if it's within bounds
+                i++;
+            }
+            if (j < word2.length()) {
+                result.append(word2.charAt(j)); // Append character from word2 if it's within bounds
+                j++;
+            }
         }
-        if (word1.length() > len) {
-            result.append(word1, len, word1.length());
+
+        // If there are remaining characters in word1, append them to the result
+        if (i < word1.length()) {
+            result.append(word1.substring(i));
         }
-        if (word2.length() > len) {
-            result.append(word2, len, word2.length());
+
+        // If there are remaining characters in word2, append them to the result
+        if (j < word2.length()) {
+            result.append(word2.substring(j));
         }
-        return result.toString();
+
+        return result.toString(); // Convert StringBuilder to String and return the merged result
     }
+
 }
