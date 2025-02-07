@@ -1,4 +1,4 @@
-package com.leetcode.codingtemplates;
+package com.leetcode.general.codingtemplates;
 
 //Two pointers: one input, opposite ends
 public class TwoPointersI {

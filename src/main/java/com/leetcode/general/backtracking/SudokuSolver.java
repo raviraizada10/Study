@@ -1,4 +1,4 @@
-package com.leetcode.backtracking;
+package com.leetcode.general.backtracking;
 
 public class SudokuSolver {
 //    public void solveSudoku(char[][] board) {

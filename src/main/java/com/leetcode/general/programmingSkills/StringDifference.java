@@ -1,4 +1,4 @@
-package com.leetcode.programmingSkills;
+package com.leetcode.general.programmingSkills;
 
 public class StringDifference {
     public char findTheDifference(String s, String t) {

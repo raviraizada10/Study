@@ -1,4 +1,4 @@
-package com.leetcode.codingtemplates;
+package com.leetcode.general.codingtemplates;
 
 public class ReverseLinkedList {
     public ListNode fn(ListNode head) {

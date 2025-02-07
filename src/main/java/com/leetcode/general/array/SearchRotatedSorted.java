@@ -1,4 +1,4 @@
-package com.leetcode.array;
+package com.leetcode.general.array;
 
 import com.customannotation.DifficultyLevel;
 import com.customannotation.ProblemCategory;

@@ -1,4 +1,4 @@
-package com.leetcode.codingtemplates;
+package com.leetcode.general.codingtemplates;
 
 public class BinaryTreeRecusrsiveDFS {
 //    public int dfs(TreeNode root) {

@@ -1,4 +1,4 @@
-package com.leetcode.codingtemplates;
+package com.leetcode.general.codingtemplates;
 
 public class SlidingWindow {
     private static final boolean WINDOW_CONDITION_BROKEN = true;
