@@ -16,9 +16,9 @@ public class MaxSumWithEqualDigits {
     public int maximumSum(int[] nums){
         HashMap<Integer, Integer> sumMap = new HashMap<>();
         int maxSum = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            int sum = sumOfDigits(nums[i]);
-            sumMap.put(sum, sumMap.getOrDefault(sum, 0)+nums[i]);
+        for (int num : nums) {
+            int sum = sumOfDigits(num);
+            sumMap.put(sum, sumMap.getOrDefault(sum, 0) + num);
             maxSum = Math.max(maxSum, sumMap.get(sum));
         }
         return maxSum;

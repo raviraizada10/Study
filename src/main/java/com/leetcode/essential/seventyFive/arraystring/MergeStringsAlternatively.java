@@ -28,28 +28,12 @@ public class MergeStringsAlternatively {
 
         int i = 0, j = 0; // Initialize indices for word1 and word2
 
-        int len = Math.min(word1.length(), word2.length()); // Find the minimum length of word1 and word2
-
-        // Append characters alternately from both strings until one or both are fully processed
-        while (i < len || j < len) {
-            if (i < word1.length()) {
-                result.append(word1.charAt(i)); // Append character from word1 if it's within bounds
-                i++;
-            }
-            if (j < word2.length()) {
-                result.append(word2.charAt(j)); // Append character from word2 if it's within bounds
-                j++;
-            }
-        }
-
-        // If there are remaining characters in word1, append them to the result
-        if (i < word1.length()) {
-            result.append(word1.substring(i));
-        }
-
-        // If there are remaining characters in word2, append them to the result
-        if (j < word2.length()) {
-            result.append(word2.substring(j));
+        // Append characters alternately from both strings until both are fully processed
+        while (i < word1.length() || j < word2.length()) {
+            if (i < word1.length())
+                result.append(word1.charAt(i++)); // Append character from word1 if it's within bounds
+            if (j < word2.length())
+                result.append(word2.charAt(j++)); // Append character from word2 if it's within bounds
         }
 
         return result.toString(); // Convert StringBuilder to String and return the merged result

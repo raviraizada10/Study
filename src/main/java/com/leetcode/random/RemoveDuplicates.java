@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 import com.customannotation.DifficultyLevel;
 import com.customannotation.ProblemCategory;

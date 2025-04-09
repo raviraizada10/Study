@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 public class maxRepeatingSubstring {
     public int maxRepeating(String sequence, String word) {

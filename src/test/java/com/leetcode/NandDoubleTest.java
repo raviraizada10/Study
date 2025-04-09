@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import com.leetcode.random.NandDouble;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

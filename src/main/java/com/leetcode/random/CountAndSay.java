@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 //https://leetcode.com/problems/count-and-say/
 public class CountAndSay {

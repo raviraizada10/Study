@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 public class MinimizedMaximum {
     public int minimizedMaximum(int n, int[] quantities) {

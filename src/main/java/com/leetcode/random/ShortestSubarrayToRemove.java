@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 //1574. Shortest Subarray to be Removed to Make Array Sorted
 public class ShortestSubarrayToRemove {

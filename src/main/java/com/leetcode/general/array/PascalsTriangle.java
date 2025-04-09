@@ -20,6 +20,6 @@ public class PascalsTriangle {
         for (int i = 0; i < numRows; i++) {
 
         }
-        return;
+        return null;
     }
 }   

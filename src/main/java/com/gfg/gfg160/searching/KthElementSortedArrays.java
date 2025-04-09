@@ -3,7 +3,7 @@ package com.gfg.gfg160.searching;
 public class KthElementSortedArrays {
     public int kthElement(int a[], int b[], int k) {
         if (a.length > b.length) {
-            return findKthElement(b, a, k); // Ensure a is the smaller array
+            return kthElement(b, a, k); // Ensure a is the smaller array
         }
 
         int m = a.length, n = b.length;

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 public class EncryptedSum {
     public int sumOfEncryptedInt(int[] nums) {

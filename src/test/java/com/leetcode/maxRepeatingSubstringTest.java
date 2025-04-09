@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import com.leetcode.random.maxRepeatingSubstring;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

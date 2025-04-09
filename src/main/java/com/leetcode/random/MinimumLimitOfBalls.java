@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 //https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/description/
 //1760

@@ -36,15 +36,11 @@ public class ReverseWords {
 
         // Iterate through the words array in reverse order.
         for (int i = words.length - 1; i >= 0; i--) {
-            result.append(words[i]) // Append each word to the result.
-                  .append(" ");     // Add a space after each word.
+            if (result.length() > 0) {
+                result.append(" ");
+            }
+            result.append(words[i]);
         }
-
-        // Return the final string, trimmed to remove the trailing space.
-        return result
-                .toString()
-                .trim();
+        return result.toString();
     }
-
-
 }

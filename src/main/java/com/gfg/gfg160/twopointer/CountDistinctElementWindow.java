@@ -2,12 +2,11 @@ package com.gfg.gfg160.twopointer;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class CountDistinctElementWindow {
     ArrayList<Integer> countDistinct(int arr[], int k) {
-        List<Integer> result = new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
         Set<Integer> windowSet = new HashSet<>();
 
         // Add the first window elements to the set

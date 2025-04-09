@@ -2,6 +2,18 @@ package com.leetcode.essential.oneFifty.array;
 
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?envType=study-plan-v2&envId=top-interview-150
 //https://algo.monster/liteproblems/121
+
+import com.customannotation.DifficultyLevel;
+import com.customannotation.ProblemCategory;
+import com.customannotation.ProblemInfo;
+
+import static com.customannotation.enums.Difficulty.EASY;
+import static com.customannotation.enums.ProblemTag.ARRAY;
+import static com.customannotation.enums.ProblemTag.DYNAMIC_PROGRAMMING;
+
+@DifficultyLevel(EASY)
+@ProblemCategory({ARRAY, DYNAMIC_PROGRAMMING})
+@ProblemInfo(problemLink = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/", problemNumber = "121", solutionLink = "https://algo.monster/liteproblems/121")
 public class BuySellStock {
     /**
      * This method calculates the maximum profit that can be made from buying and selling a stock
