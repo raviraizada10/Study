@@ -12,14 +12,19 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/", problemNumber = "235", solutionLink = "https://algo.monster/liteproblems/235")
 public class LowestCommonAncestor {
     /**
-     * Finds the Lowest Common Ancestor (LCA) of two nodes in a Binary Search Tree (BST).
-     * Leverages the BST property: left < root < right.
+     * 📝 Lowest Common Ancestor in BST – Binary Search Tree Property
+     * Use the property of BST: left < root < right.
+     * Start from the root and:
+     * •	Go left if both nodes are smaller than root,
+     * •	Go right if both nodes are greater,
+     * •	If the nodes split (one on each side), the current root is the LCA.
+     * Recursive or iterative traversal both work efficiently in O(h) time.
      *
      * @param root  the root of the BST
      * @param node1 one of the target nodes
      * @param node2 the other target node
      * @return the lowest node in the tree that has both node1 and node2 as descendants
-     *
+     * <p>
      * Edge Cases:
      * - If either node is not in the tree, returns null.
      * - If one node is the ancestor of the other, returns the ancestor.

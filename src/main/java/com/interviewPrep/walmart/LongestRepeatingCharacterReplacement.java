@@ -12,13 +12,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/longest-repeating-character-replacement/description/", problemNumber = "424", solutionLink = "https://algo.monster/liteproblems/424")
 public class LongestRepeatingCharacterReplacement {
     /**
-     * Finds the length of the longest substring where at most k characters can be replaced
-     * to make all characters the same. Uses a sliding window and character frequency tracking.
+     * 📝 Longest Repeating Character Replacement – Sliding Window + Frequency Count
+     * Use a sliding window to track a valid substring where at most k characters can be replaced.
+     * Maintain a frequency array to track the most frequent character in the current window.
+     * If characters to be replaced (window size - max frequency) exceed k, shrink the window.
+     * Update and track the maximum valid window length throughout.
      *
      * @param s the input string consisting of uppercase English letters
      * @param k the maximum number of characters allowed to be replaced
      * @return the length of the longest valid substring
-     *
+     * <p>
      * Edge Cases:
      * - If the string is empty, returns 0.
      * - If k >= length of the string, the entire string can be made uniform.

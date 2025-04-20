@@ -14,13 +14,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/subarray-sum-equals-k/", problemNumber = "560", solutionLink = "https://algo.monster/liteproblems/560")
 public class SubarraySumK {
     /**
-     * Counts the number of continuous subarrays whose sum equals to a target value k.
-     * Uses the prefix sum and hashmap technique to efficiently track cumulative sums.
+     * 📝 Subarray Sum Equals K – Prefix Sum + HashMap
+     * Track the running prefix sum while iterating through the array.
+     * Use a HashMap to store the frequency of seen prefix sums.
+     * At each step, check if (current prefix sum - k) has occurred before — this means a subarray ending at the current index sums to k.
+     * Efficiently counts valid subarrays in O(n) time.
      *
      * @param nums the input array of integers
-     * @param k the target sum
+     * @param k    the target sum
      * @return the number of continuous subarrays summing to k
-     *
+     * <p>
      * Edge Cases:
      * - If nums is empty, returns 0.
      * - Works with negative numbers as well.

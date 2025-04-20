@@ -4,14 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingChar {
-
     /**
-     * Finds the length of the longest substring without repeating characters.
-     * Uses a sliding window with a HashSet to maintain a window of unique characters.
+     * 📝 Longest Substring Without Repeating Characters – Sliding Window
+     * Use two pointers to form a moving window of unique characters.
+     * Expand the window with the right pointer, and shrink it from the left when a duplicate is found.
+     * Maintain a HashSet to track characters in the current window and update the maximum length as you go.
      *
      * @param s the input string
      * @return the length of the longest substring without duplicates
-     *
      * Edge Cases:
      * - If input string is empty, returns 0.
      * - If all characters are unique, returns the length of the string.

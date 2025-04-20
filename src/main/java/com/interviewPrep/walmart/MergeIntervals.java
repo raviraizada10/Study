@@ -17,13 +17,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/merge-intervals/", problemNumber = "56", solutionLink = "https://algo.monster/liteproblems/56")
 public class MergeIntervals {
     /**
-     * Merges all overlapping intervals from the given 2D array.
-     * An interval is represented as a two-element array [start, end].
-     * If two intervals overlap, they are combined into a single interval.
+     * 📝 Merge Intervals – Sorting + Greedy Merge
+     * Sort intervals based on start time.
+     * Iterate through each interval and compare it with the last merged one.
+     * If they overlap, merge by updating the end time to the max of both.
+     * If not, add the current interval as a new entry.
+     * This ensures all overlapping intervals are merged efficiently.
      *
      * @param intervals 2D array where each element is an interval [start, end]
      * @return a new 2D array with all overlapping intervals merged
-     *
+     * <p>
      * Edge Cases:
      * - If intervals array is empty, returns an empty array.
      * - If no intervals overlap, returns the original set in sorted order.
@@ -38,10 +41,11 @@ public class MergeIntervals {
             // If the merged list is empty OR current interval does not overlap with the last one
             if (mergedIntervals.isEmpty() || mergedIntervals.get(mergedIntervals.size() - 1)[1] < currentInterval[0]) {
                 mergedIntervals.add(currentInterval); // Add as is
-            } else {
+            }
+            else {
                 // Overlap exists: merge by updating the end of the last interval
                 mergedIntervals.get(mergedIntervals.size() - 1)[1] =
-                    Math.max(mergedIntervals.get(mergedIntervals.size() - 1)[1], currentInterval[1]);
+                        Math.max(mergedIntervals.get(mergedIntervals.size() - 1)[1], currentInterval[1]);
             }
         }
 

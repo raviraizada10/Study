@@ -15,22 +15,20 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @DifficultyLevel(MEDIUM)
 @ProblemCategory({ARRAY})
 @ProblemInfo(
-    problemLink = "https://leetcode.com/problems/group-anagrams/description/",
-    problemNumber = "49",
-    solutionLink = "https://algo.monster/liteproblems/49"
+        problemLink = "https://leetcode.com/problems/group-anagrams/description/",
+        problemNumber = "49",
+        solutionLink = "https://algo.monster/liteproblems/49"
 )
-/**
- * This class contains a method to group anagrams from a list of strings.
- * Anagrams are words that contain the same characters but in a different order.
- */
 public class GroupAnagrams {
 
     /**
-     * Groups strings that are anagrams of each other.
+     * 📝 Group Anagrams – HashMap + Sorted Key
+     * Convert each word to a character array, sort it, and use the sorted string as a canonical key in a HashMap.
+     * Anagrams will share the same sorted form, so group words by this key.
+     * Finally, return all grouped lists from the map.
      *
      * @param inputWords an array of lowercase strings
      * @return a list of lists, where each sublist contains strings that are anagrams
-     *
      * Edge Cases:
      * - If the input array is empty, returns an empty list.
      * - If input has only one string, returns a list with a single sublist.
@@ -46,7 +44,9 @@ public class GroupAnagrams {
             String canonicalKey = new String(charArray); // This key is identical for all anagrams
 
             // Group anagrams using the canonical key
-            anagramGroups.computeIfAbsent(canonicalKey, k -> new ArrayList<>()).add(originalWord);
+            anagramGroups
+                    .computeIfAbsent(canonicalKey, k -> new ArrayList<>())
+                    .add(originalWord);
         }
 
         // Return grouped anagrams as a list of lists

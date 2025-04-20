@@ -12,12 +12,15 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/maximum-subarray/", problemNumber = "53", solutionLink = "https://algo.monster/liteproblems/53")
 public class MaxSubArray {
     /**
-     * Finds the contiguous subarray within a one-dimensional array that has the largest sum.
-     * Implements Kadane's Algorithm to achieve O(n) time complexity.
+     * 📝 Maximum Subarray – Kadane’s Algorithm
+     * Iterate through the array while tracking the current subarray sum.
+     * At each index, decide whether to extend the current subarray or start a new one using Math.max(current, current + previousSum).
+     * Keep updating the maximum sum seen so far.
+     * Works efficiently in O(n) time, even with negative numbers.
      *
      * @param nums the input array of integers
      * @return the maximum sum of any contiguous subarray
-     *
+     * <p>
      * Edge Cases:
      * - If nums has one element, returns that element.
      * - Handles arrays with all negative values correctly.

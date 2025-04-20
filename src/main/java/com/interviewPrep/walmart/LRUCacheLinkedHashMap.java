@@ -14,6 +14,14 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemCategory({ARRAY})
 @ProblemInfo(problemLink = "https://leetcode.com/problems/lru-cache/", problemNumber = "146", solutionLink = "https://algo.monster/liteproblems/146")
 public class LRUCacheLinkedHashMap extends LinkedHashMap<Integer, Integer> {
+    /**
+     * 📝 LRU Cache (LinkedHashMap) – Built-in Access Order
+     * Extend LinkedHashMap with accessOrder = true to automatically reorder entries by recent access.
+     * Override removeEldestEntry to remove the least recently used item when size exceeds capacity.
+     * Use get() and put() directly — access triggers reordering, so the least used moves to the end.
+     * This provides a clean O(1) solution using built-in Java data structures.
+     */
+
     private int capacity;
 
     public LRUCacheLinkedHashMap(int capacity) {

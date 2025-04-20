@@ -14,13 +14,14 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/house-robber/", problemNumber = "198", solutionLink = "https://algo.monster/liteproblems/198")
 public class HouseRobber {
     /**
-     * Solves the House Robber problem using bottom-up dynamic programming.
-     * At each house, the decision is to rob it (and add the value from two houses back)
-     * or skip it (and take the maximum value up to the previous house).
+     * 📝 House Robber – Dynamic Programming
+     * At each house, decide to either rob it (and add the value from i-2) or skip it (take the value from i-1).
+     * Use bottom-up DP or memoized recursion to compute the max sum without robbing adjacent houses.
+     * Space can be optimized by keeping track of only the last two computed values.
      *
      * @param nums an array representing the amount of money at each house
      * @return the maximum amount of money that can be robbed without robbing adjacent houses
-     *
+     * <p>
      * Edge Cases:
      * - If there are no houses, return 0.
      * - If there's only one house, return its value.

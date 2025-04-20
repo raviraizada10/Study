@@ -14,12 +14,15 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/longest-increasing-subsequence/description/", problemNumber = "300", solutionLink = "https://algo.monster/liteproblems/300")
 public class LIS {
     /**
-     * Calculates the length of the Longest Increasing Subsequence (LIS) in an array.
-     * Uses dynamic programming (O(n^2) approach) to compute the LIS ending at each index.
+     * 📝 Longest Increasing Subsequence (LIS) – Dynamic Programming
+     * Use a dynamic programming approach where lisAtIndex[i] stores the length of the longest increasing subsequence that ends at index i.
+     * For each element, check all previous elements, and if the current element is greater, extend the subsequence.
+     * The final answer is the maximum value in the lisAtIndex array.
+     * Time complexity: O(n²).
      *
      * @param nums the input array of integers
      * @return the length of the longest increasing subsequence
-     *
+     * <p>
      * Edge Cases:
      * - If nums is empty, returns 0.
      * - If nums has one element, returns 1.

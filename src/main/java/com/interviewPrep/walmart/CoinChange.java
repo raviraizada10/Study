@@ -14,13 +14,17 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/coin-change/description/", problemNumber = "322", solutionLink = "https://algo.monster/liteproblems/322")
 public class CoinChange {
     /**
-     * Solves the Coin Change problem using bottom-up dynamic programming.
-     * Determines the minimum number of coins required to make up a given amount.
+     * 📝 Coin Change – Bottom-Up Dynamic Programming
+     * Use a DP array where dp[i] stores the minimum number of coins needed to make amount i.
+     * Initialize all values with a high number (amount + 1) to simulate infinity, except dp[0] = 0.
+     * For each coin, update dp[i] from coin to amount as:
+     * dp[i] = min(dp[i], dp[i - coin] + 1)
+     * Final answer is dp[amount], or -1 if it’s still unachievable.
      *
      * @param coins  array of coin denominations
      * @param amount total amount to make up
      * @return minimum number of coins needed to make the amount; -1 if not possible
-     *
+     * <p>
      * Edge Cases:
      * - If amount is 0, returns 0.
      * - If coins array is empty or no combination can form the amount, returns -1.
@@ -38,7 +42,7 @@ public class CoinChange {
             for (int currentAmount = coin; currentAmount <= amount; currentAmount++) {
                 // Update if taking this coin leads to fewer coins
                 minCoinsRequired[currentAmount] = Math.min(minCoinsRequired[currentAmount],
-                                                           1 + minCoinsRequired[currentAmount - coin]);
+                        1 + minCoinsRequired[currentAmount - coin]);
             }
         }
 

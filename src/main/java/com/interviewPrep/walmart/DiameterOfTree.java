@@ -16,8 +16,11 @@ public class DiameterOfTree {
     private static int maxDiameter = Integer.MIN_VALUE;
 
     /**
-     * Calculates the diameter (longest path between any two nodes) of a binary tree.
-     * The diameter may or may not pass through the root.
+     * 📝 Diameter of Binary Tree – DFS + Postorder Traversal
+     * Use a recursive DFS to compute the depth of each subtree.
+     * At each node, calculate the path length as left depth + right depth and update the maximum diameter found so far.
+     * Return the height (1 + max of left and right) to the parent to continue the DFS.
+     * The longest path can pass through any node, not just the root.
      *
      * @param root the root node of the binary tree
      * @return the length of the longest path between any two nodes in the tree

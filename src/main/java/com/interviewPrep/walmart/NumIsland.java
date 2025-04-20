@@ -12,12 +12,14 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/number-of-islands/", problemNumber = "200", solutionLink = "https://algo.monster/liteproblems/200")
 public class NumIsland {
     /**
-     * Counts the number of islands in a 2D grid where '1' represents land and '0' represents water.
-     * Uses DFS to visit and mark all connected land as visited by converting it to '0'.
+     * 📝 Number of Islands – DFS Flood Fill
+     * Traverse the grid and for every unvisited land cell ('1'), trigger a DFS to “flood” the entire island by marking connected land as visited ('0').
+     * Each DFS call counts as discovering a new island.
+     * Use recursive DFS in 4 directions (up, down, left, right) to explore connected land.
      *
      * @param grid 2D character array representing a map of '1's (land) and '0's (water)
      * @return the number of distinct islands found in the grid
-     *
+     * <p>
      * Edge Cases:
      * - If grid is null or empty, returns 0.
      */
@@ -44,8 +46,8 @@ public class NumIsland {
      * Depth-first search to mark all land connected to the current cell as visited.
      *
      * @param grid 2D grid of land and water
-     * @param row current row index
-     * @param col current column index
+     * @param row  current row index
+     * @param col  current column index
      */
     private void dfs(char[][] grid, int row, int col) {
         // Base case: if out of bounds or water cell, return

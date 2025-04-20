@@ -15,7 +15,11 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 public class TwoSum {
 
     /**
-     * Finds two distinct indices in the array such that the numbers at those indices add up to the target.
+     * 📝 Two Sum – HashMap for Complement Lookup
+     * Use a HashMap to store previously seen numbers and their indices.
+     * For each number, compute its complement (target - num) and check if it exists in the map.
+     * If found, return both indices — one from the map and the current index.
+     * This allows O(n) time complexity by avoiding nested loops.
      *
      * @param nums   the input array of integers
      * @param target the target sum to find

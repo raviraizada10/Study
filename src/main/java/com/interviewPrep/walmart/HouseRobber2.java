@@ -13,15 +13,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 public class HouseRobber2 {
 
     /**
-     * Solves the House Robber II problem where houses are arranged in a circle.
-     * You cannot rob both the first and last houses. So, we compute two cases:
-     * - Rob from house 0 to n-2 (exclude last house)
-     * - Rob from house 1 to n-1 (exclude first house)
-     * The answer is the max of both cases.
+     * 📝 House Robber II – Dynamic Programming with Circular Array Handling
+     * Treat the problem as two separate linear problems:
+     * 1.	Rob from house 0 to n-2 (exclude the last house).
+     * 2.	Rob from house 1 to n-1 (exclude the first house).
+     * Use dynamic programming to solve the linear problem efficiently, keeping track of the maximum money robbed from two previous houses.
+     * Return the maximum of both cases to account for the circular arrangement of houses.
      *
      * @param nums the array representing money in each house
      * @return the maximum amount that can be robbed without alerting the police
-     *
+     * <p>
      * Edge Cases:
      * - No houses => return 0
      * - One house => return its value

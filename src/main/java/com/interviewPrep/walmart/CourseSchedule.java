@@ -15,14 +15,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/course-schedule/description/", problemNumber = "207", solutionLink = "https://algo.monster/liteproblems/207")
 public class CourseSchedule {
     /**
-     * Determines if it's possible to finish all courses given the prerequisites.
-     * This problem is modeled as a directed graph where courses are nodes,
-     * and prerequisites are directed edges. We need to check for cycles in the graph.
+     * 📝 Course Schedule – Topological Sort via DFS (Cycle Detection)
+     * Model courses as a directed graph, with edges representing prerequisites.
+     * Use DFS with a state array (unvisited, visiting, visited) to detect cycles.
+     * If you encounter a node that’s already being visited (state = visiting), a cycle exists — return false.
+     * If no cycles are found after DFS from all nodes, it’s possible to finish all courses.
      *
      * @param numCourses    total number of courses
      * @param prerequisites array of prerequisite pairs [a, b] meaning b -> a
      * @return true if all courses can be finished (no cycle), false otherwise
-     *
+     * <p>
      * Edge Cases:
      * - No prerequisites: all courses are independent, return true
      * - A cycle exists: return false
@@ -38,7 +40,9 @@ public class CourseSchedule {
 
         // Build adjacency list from prerequisites: course B -> course A
         for (int[] prerequisite : prerequisites) {
-            adjacencyList.get(prerequisite[1]).add(prerequisite[0]);
+            adjacencyList
+                    .get(prerequisite[1])
+                    .add(prerequisite[0]);
         }
 
         // Check for cycle starting from each unvisited course
@@ -47,7 +51,6 @@ public class CourseSchedule {
                 return false;
             }
         }
-
         return true;
     }
 

@@ -18,11 +18,15 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 public class BinaryTreeRightSide {
 
     /**
+     * 📝 Binary Tree Right Side View – Level Order BFS
+     * Use BFS (level-order traversal) to visit nodes level by level.
+     * At each level, add the last node’s value (rightmost node) to the result list.
+     * This ensures only the visible nodes from the right side are captured.
+     * Ideal for queue-based traversal problems involving tree levels.
      * Returns the list of node values visible from the right side of the binary tree.
      *
      * @param root the root of the binary tree
      * @return a list of integer values representing the rightmost node at each level
-     *
      * Edge Cases:
      * - If the tree is empty (root is null), returns an empty list.
      */

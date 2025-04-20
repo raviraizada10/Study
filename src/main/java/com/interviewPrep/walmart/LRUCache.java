@@ -14,6 +14,12 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
  * Implementation of an LRU (Least Recently Used) Cache using a combination of
  * HashMap for O(1) lookups and a Doubly Linked List for O(1) insertions/removals.
  * This structure allows us to efficiently track usage order and evict the least recently used item.
+ * <p>
+ * 📝 LRU Cache – HashMap + Doubly Linked List
+ * Use a HashMap for O(1) access to cache entries, and a Doubly Linked List to track usage order.
+ * Move accessed/updated nodes to the front (most recently used).
+ * When capacity is exceeded, remove the node at the tail (least recently used).
+ * Combines fast lookup with efficient insert/remove to maintain LRU behavior.
  */
 @DifficultyLevel(MEDIUM)
 @ProblemCategory({ARRAY})
@@ -29,6 +35,7 @@ public class LRUCache {
 
     /**
      * Constructs an LRUCache with the specified capacity.
+     *
      * @param capacity the maximum number of items the cache can hold
      */
     public LRUCache(int capacity) {

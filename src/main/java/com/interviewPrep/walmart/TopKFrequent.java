@@ -16,13 +16,16 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/top-k-frequent-elements/description/", problemNumber = "347", solutionLink = "https://algo.monster/liteproblems/347")
 public class TopKFrequent {
     /**
-     * Finds the k most frequent elements in an integer array.
-     * Uses a frequency map and a min-heap to efficiently keep track of the top k frequent items.
+     * 📝 Top K Frequent Elements – HashMap + Min-Heap
+     * First, count the frequency of each element using a HashMap.
+     * Then, use a min-heap (size k) to keep track of the top k frequent elements.
+     * If the heap exceeds size k, remove the element with the lowest frequency.
+     * Finally, extract elements from the heap to get the result.
      *
      * @param nums input array of integers
-     * @param k the number of top frequent elements to return
+     * @param k    the number of top frequent elements to return
      * @return an array of the k most frequent elements
-     *
+     * <p>
      * Edge Cases:
      * - If nums is empty, returns an empty array.
      * - If k >= nums.length, returns all unique elements.

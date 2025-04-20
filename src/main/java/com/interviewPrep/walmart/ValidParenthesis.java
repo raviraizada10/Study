@@ -14,13 +14,15 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @ProblemInfo(problemLink = "https://leetcode.com/problems/valid-parentheses/description/", problemNumber = "20", solutionLink = "https://algo.monster/liteproblems/20")
 public class ValidParenthesis {
     /**
-     * Validates if the input string of parentheses is well-formed.
-     * A string is considered valid if every opening bracket has a matching closing bracket
-     * in the correct order and properly nested.
+     * 📝 Valid Parentheses – Stack-Based Matching
+     * Use a stack to track opening brackets.
+     * For each closing bracket, check if the top of the stack has the corresponding opening bracket.
+     * If mismatched or stack is empty when a closing appears, it’s invalid.
+     * A valid string ends with an empty stack, meaning all brackets were correctly matched and closed.
      *
      * @param s the input string consisting of '(', ')', '{', '}', '[' and ']'
      * @return true if the string is valid; false otherwise
-     *
+     * <p>
      * Edge Cases:
      * - An empty string is valid.
      * - A string with only closing brackets or mismatched pairs is invalid.
@@ -33,7 +35,8 @@ public class ValidParenthesis {
             // If it's an opening bracket, push it to the stack
             if (currentChar == '(' || currentChar == '{' || currentChar == '[') {
                 stack.push(currentChar);
-            } else {
+            }
+            else {
                 // If there's no corresponding opening bracket
                 if (stack.isEmpty()) return false;
 

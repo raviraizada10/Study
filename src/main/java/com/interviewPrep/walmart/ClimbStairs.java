@@ -12,9 +12,9 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 @DifficultyLevel(MEDIUM)
 @ProblemCategory({ARRAY})
 @ProblemInfo(
-    problemLink = "https://leetcode.com/problems/climbing-stairs/",
-    problemNumber = "70",
-    solutionLink = "https://algo.monster/liteproblems/70"
+        problemLink = "https://leetcode.com/problems/climbing-stairs/",
+        problemNumber = "70",
+        solutionLink = "https://algo.monster/liteproblems/70"
 )
 /**
  * Class to solve the Climbing Stairs problem.
@@ -25,10 +25,14 @@ import static com.customannotation.enums.ProblemTag.ARRAY;
 public class ClimbStairs {
 
     /**
-     * Calculates number of ways to climb 'n' stairs using memoization.
+     * 📝 Climbing Stairs – Fibonacci + Dynamic Programming
+     * This is a variation of the Fibonacci sequence.
+     * At each step n, the total ways to reach it is the sum of ways to reach n-1 and n-2.
+     * Use memoization (top-down) or tabulation (bottom-up) to avoid redundant calculations and solve efficiently.
+     *
      * @param n the number of stairs
      * @return number of unique ways to climb to the top
-     *
+     * <p>
      * Edge Cases:
      * - If n = 0 or 1, there's only one way to climb.
      */
@@ -40,7 +44,8 @@ public class ClimbStairs {
 
     /**
      * Recursive helper with memoization.
-     * @param n current stair index
+     *
+     * @param n                current stair index
      * @param memoizationArray stores previously computed results
      * @return number of ways to climb to step n
      */
@@ -58,6 +63,7 @@ public class ClimbStairs {
 
     /**
      * Calculates number of ways to climb 'n' stairs using tabulation (bottom-up DP).
+     *
      * @param n the number of stairs
      * @return number of unique ways to climb to the top
      */
