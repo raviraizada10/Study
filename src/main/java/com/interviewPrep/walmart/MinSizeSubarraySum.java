@@ -38,8 +38,7 @@ public class MinSizeSubarraySum {
             while (windowSum >= target) {
                 // Update the minimum window size
                 minWindowLength = Math.min(minWindowLength, windowEnd - windowStart + 1);
-                windowSum -= nums[windowStart]; // Slide window forward
-                windowStart++;
+                windowSum -= nums[windowStart++]; // Slide window forward
             }
         }
 
